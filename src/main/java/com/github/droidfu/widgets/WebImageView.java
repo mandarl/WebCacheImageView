@@ -133,7 +133,8 @@ public class WebImageView extends ViewSwitcher {
         this.progressDrawable = progressDrawable;
         this.errorDrawable = errorDrawable;
 
-        ImageLoader.initialize(context);
+        if(!this.isInEditMode())
+            ImageLoader.initialize(context);
 
         // ScaleAnimation anim = new ScaleAnimation(0.0f, 1.0f, 0.0f, 1.0f,
         // 125.0f, preferredItemHeight / 2.0f);
